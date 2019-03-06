@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>二维码生成方案</title>
+	</head>
+	<body>
+		
+		<div id="codeBlockBox">
+			
+		</div>
+	</body>
+	<script src="../jsmin/qrcode.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var qrcode = new QRCode("codeBlockBox", {
+			text: "https://www.baidu.con/fackYou/but,and Your Feces",
+			width: 128,//生成二维码宽度
+			height: 128,//生成二维码高度
+			colorDark : "#000000",//二维码颜色
+			colorLight : "#FFFFff",//二维码背景色
+			correctLevel : QRCode.CorrectLevel.H
+		});
+		
+		//清除已经生成的二维码,
+		qrcode.clear(); // clear the code.
+		//再次生成二维码
+		qrcode.makeCode("http://Feces.com"); // make another code.
+		
+	</script>
+</html>
