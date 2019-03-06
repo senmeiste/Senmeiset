@@ -9,24 +9,18 @@
 		<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
 		<META HTTP-EQUIV="expires" CONTENT="Wed Mar 06 2019 17:07:12 GMT">
 		<META HTTP-EQUIV="expires" CONTENT="0">
-		<title>Rem 定义项 js设置项 100:1</title>
+		<title>Rem 定义项 手淘比例写法 75:1</title>
 	</head>
-	<script type="text/javascript">
-		//适配
-		document.documentElement.style.fontSize = document.documentElement.clientWidth / 750 * 100 + 'px';
-		window.onresize = function() {
-			document.documentElement.style.fontSize = document.documentElement.clientWidth / 750 * 100 + 'px';
-		};
-	</script>
+	<script src="flexible.js" type="text/javascript" charset="utf-8"></script>
 	<body >
 		<div style="font-size: 0.3rem;">
 			比例尺
 			<br><br>
-			1rem == 100ppi == 100px(PSD)
+			1rem == 75ppi == 75px(PSD)
 			
 			<br>
 			<br>
-			此方法的适用性较高，PSD转化时计算较为迅速，个人推荐此种rem定义方法
+			此方法的适用性较高，但计算差值较为麻烦，但此方法适配了横屏展示时的效果
 		</div>
 		
 	</body>

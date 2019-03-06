@@ -9,26 +9,25 @@
 		<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
 		<META HTTP-EQUIV="expires" CONTENT="Wed Mar 06 2019 17:07:12 GMT">
 		<META HTTP-EQUIV="expires" CONTENT="0">
-		<title>Rem 定义项 js设置项 100:1</title>
+		<title>Rem 定义项 js设置项 40:1</title>
 	</head>
 	<script type="text/javascript">
 		//适配
-		document.documentElement.style.fontSize = document.documentElement.clientWidth / 750 * 100 + 'px';
-		window.onresize = function() {
-			document.documentElement.style.fontSize = document.documentElement.clientWidth / 750 * 100 + 'px';
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 360 * 20 + 'px';
+		window.onresize = function () {
+		    document.documentElement.style.fontSize = document.documentElement.clientWidth / 360 * 20 + 'px';
 		};
 	</script>
-	<body >
-		<div style="font-size: 0.3rem;">
+	<body>
+		<div style="font-size: 0.6rem;">
 			比例尺
 			<br><br>
-			1rem == 100ppi == 100px(PSD)
+			1rem == 40ppi == 40px(PSD)
 			
 			<br>
 			<br>
-			此方法的适用性较高，PSD转化时计算较为迅速，个人推荐此种rem定义方法
+			此方法的适用性还可以，PSD转化时计算较100:1那个较为困难，使用还算较为可以
 		</div>
-		
 	</body>
 	
 </html>
