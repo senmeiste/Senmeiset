@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue 模板语法</title>
+		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<div>{{meta + ' 这是后加的'}}</div>
+			<div v-once>{{meta}}</div>
+			<div v-text="meta + ' 这是后加的'"></div>
+			<div v-html="metas + '这是后加的'"></div>
+		</div>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el:"#app",
+				data:{
+					meta:"hello world",
+					metas:"<h1>hello world</h1>"
+				}
+			})
+		</script>
+	</body>
+</html>

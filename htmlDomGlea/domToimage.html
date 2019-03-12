@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta name="format-detection" content="telephone=yes" />
+		
+		<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+		<META HTTP-EQUIV="expires" CONTENT="Wed Mar 06 2019 17:07:12 GMT">
+		<META HTTP-EQUIV="expires" CONTENT="0">
+		<title>domToimage</title>
+	</head>
+	<script type="text/javascript">
+		//适配
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 360 * 20 + 'px';
+		window.onresize = function () {
+		    document.documentElement.style.fontSize = document.documentElement.clientWidth / 360 * 20 + 'px';
+		};
+	</script>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		#app{
+			width: 100%;
+			height: 10.55rem;
+			position: relative;
+			text-align: center;
+		}
+		#app img{
+			width: 100%;
+			height: 10.55rem;
+			position: absolute;
+			left: 0;top: 0;
+		}
+		.titleBoxAll{
+			display: inline-block;
+			width: 10rem;
+			min-height: 3.5rem;
+			background: #5d20d4;
+			position: absolute;
+			left: 0;right:0; top:0.5rem;
+			margin: 0 auto;
+			border-radius: 0.2rem;
+		}
+		.titleBox{
+			text-align: center;
+			width: 100%;
+			line-height: 1.65rem;
+			font-size: 1.1rem;
+			/* color: sandybrown;
+			background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(0, 128, 0, 1)), to(rgba(51, 51, 51, 1)));
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent; */
+			/* content: attr(data-text);  */
+    color: #facc84;  
+    /* position: absolute;  
+    left: 0; */ 
+    z-index: 2;
+    -webkit-mask-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(0,0,0,0.4)), to(#f6ac36));
+		}
+		.h1title{
+			text-align: center;
+			width: 100%;
+			line-height: 1.125rem;
+			font-size: 0.75rem;
+			color: #fff;
+		}
+	</style>
+	<body>
+		<div style="opacity: 0;">
+			<div id="app">
+				<img src="https://cn.bing.com/th?id=OHR.LeopardNamibia_ZH-CN9585068449_1920x1080.jpg&rf=NorthMale_1920x1080.jpg&pid=hp" >
+				<div class="titleBoxAll">
+					<div class="titleBox">
+						这是标题
+					</div>
+					<div class="h1title">
+						副标题
+					</div>
+				</div>
+				<div class="centent">
+					
+				</div>
+			</div>
+		</div>
+		
+		<img src="" >
+		
+	</body>
+	<script src="dom-to-image.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		'use strict';
+		
+// 		方法使用
+// 		domtoimage.toPng(Dom,Object).then(function (dataUrl) {
+// 			
+// 		})
+//		domtoimage.toPng()   此方法有多种使用方法,png,img,jpg,svg,等多种调用方式
+//		
+//		dom  为需要转化为图片的节点内容
+//
+//		Object		此为生成图片的参数  
+//				
+/*
+//				filter ： 过滤器节点中默写不需要的节点；
+				bgcolor ： 图片背景颜色；
+				height, width ： 图片宽高；
+				style ：传入节点的样式，可以是任何有效的样式；
+				quality ： 图片的质量，也就是清晰度；
+				cacheBust ： 将时间戳加入到图片的url中，相当于添加新的图片；
+				imagePlaceholder ： 图片生成失败时，在图片上面的提示，相当于img标签的alt；
+//
+*/
+/*		function(dataUrl){}		此方法是生成图片之后的回调
+*
+*				其中dataUrl为返回的base64图片流
+* 
+*/
+		
+		domtoimage.toPng(document.getElementById('app'), { quality: 0.999 }).then(function (dataUrl) {
+			// console.log(dataUrl)
+			var img = new Image();
+			img.src = dataUrl;
+			document.body.appendChild(img);
+		});
+		
+	</script>
+</html>

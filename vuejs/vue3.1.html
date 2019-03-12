@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Vue 实例生命周期函数</title>
+		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app"></div>
+		<script type="text/javascript">
+			//生命周期函数就是vue实例在某一时间点会自动执行的函数
+			var vm=new Vue({
+				el:"#app",//挂载点
+				template:"<div>{{test}}</div>",//模板
+				data:{//数据
+					test: "hello world"
+				},
+				methods:{//事件
+					
+				},
+				beforeCreate: function () {//初始化事件和生命周期相关的一些内容,完成后会自动执行此函数
+					console.log("beforeCreate")
+				},
+				created (){//初始化外部的注入和双向数据绑定完成的时候会执行此函数
+					console.log("created")
+				},//初始化运行完成后会询问是否有el选项,有el选项的时候会执行询问是否有template选项,没有的时候,会把el内部的内容当作模板去渲染
+				//有template模板的时候,会根据模板直接去执行渲染页面,在模板执行渲染之前会执行beforeMount函数
+				beforeMount() {//执行的时候页面还没有被渲染
+					console.log(this.$el);//this.$el会获取到挂载实例对象节点内所有内容
+					console.log("beforeMount")
+				},//beforeMount执行之后,模板结合数据生成的dom元素会被挂载到页面之上
+				mounted() {//当页面挂载渲染之后,会执行mounted函数
+					console.log(this.$el);//this.$el会获取到挂载实例对象节点内所有内容
+					console.log("mounted")
+				},
+				beforeDestroy() {//在vm.$destroy()被调用的时候会触发此函数
+				//vm.$destroy();此代码直接在console里执行时,组件被销毁
+					console.log("beforeDestroy")
+				},
+				destroyed() {//在vm.$destroy()被执行的时候，组件被销毁时，会触发此函数
+					console.log("destroyed")
+				},
+				beforeUpdate() {//当数据发生改变的时候
+					//console里执行vm.name = ... (name 为 data数据中的key)执行的时候会触发此行数
+					console.log(this.$el);//此时beforeUpdate被触发时去抓取挂载节点内的内容时,会发现挂载内容已经被改变
+					console.log(this.test)//此时数据已经发生变化,但未渲染到实例对象中
+					console.log("beforeUpdate")
+				},
+				updated() {//当数据改变后并执行后
+					console.log(this.test)//此时数据已经发生变化且已渲染到实例对象中
+					console.log(this.$el);
+					console.log("updated")
+				}
+				//vue生命周期函数并不放在methods函数里,而是直接放在vue实例对象里
+			})
+		</script>
+		
+	</body>
+</html>

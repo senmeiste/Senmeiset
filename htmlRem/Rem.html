@@ -29,6 +29,62 @@
 			此方法的适用性较高，PSD转化时计算较为迅速，个人推荐此种rem定义方法
 		</div>
 		
+		
+		<!-- 附赠按钮锁 -->
+		<div id="btnse">
+			按钮
+		</div>
+		
+		
 	</body>
+	
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	
+	
+	<script type="text/javascript">
+		
+		
+		$("#btnse").click(function(){
+			var that = $(this);
+			var type = clickDBClears({
+				doms:that,//节点
+				type: true,//加锁
+				fun: function(){//节点加锁时回调
+					// 方法
+					
+					setTimeout(function(){//此处时表示多及俄之后放开节点锁
+						
+						//放开锁
+						clickDBClears({
+							doms:that,//节点
+							type: false,//放开锁
+						});
+						
+					},1000);
+				}
+			});
+			
+		})
+		
+		function clickDBClears(Objects){
+			var typeopen = true;
+			if(Objects.type){
+				if(Objects.doms.hasClass("btnIsNoClick")){
+					return false;
+				}else{
+					if(Objects.fun){
+						Objects.fun();
+					}
+				}
+				Objects.doms.addClass("btnIsNoClick");
+			}else{
+				Objects.doms.removeClass("btnIsNoClick");
+			}
+		}
+		
+		
+		
+		
+	</script>
 	
 </html>

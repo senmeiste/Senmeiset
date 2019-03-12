@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Vue 计算属性与侦听器</title>
+		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			{{firstName + " " + lastName + " " + age}}
+			<br>
+			{{fullName + age}}
+			<br>
+			{{fullNameT()}}{{age}}
+			<br>
+			{{className}}
+		</div>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el: "#app",
+				data:{
+					firstName :"zhang",
+					lastName: "qiang",
+					className: '先期值，在last或是frist改变时，会被侦听改变',
+					age: 27,
+				},
+				//计算属性
+				computed:{
+					//计算属性依赖的属性值发生改变时,计算属性会重新渲染计算
+					//若依赖值未发生改变,则计算属性不会重新计算渲染
+					//计算属性会把计算值写入缓存,即vm实例里
+					fullName:function(){
+						console.log("计算了一次 1")
+						//this指向vm实例
+						return this.firstName +" " +this.lastName
+					}
+				},
+				methods:{//方法同样可以实现监听,但不会写入缓存实例,会每次修改vm实例数据时都会进行渲染
+					fullNameT:function(){
+						console.log("计算了一次 2")
+						return this.lastName +" " +this.firstName
+					}
+				},
+				watch:{//侦听器
+					//侦听会把数据改变得到的值写入缓存,即vm实例里
+					//若依赖值未发生改变,则侦听器不会重新计算渲染
+					firstName:function(){//对数据fristName进行侦听,当侦听到数据改变时,运行其内的函数
+						console.log("计算了一次 3")
+						this.className = this.firstName + " " +this.lastName
+					},
+					lastName:function(){//对数据lastName进行侦听,当侦听到数据改变时,运行其内的函数
+						console.log("计算了一次 4")
+						this.className = this.firstName + " " +this.lastName
+					}
+				},
+				
+				// 若三种方法都可完成需求开发,优先考虑使用computed
+				//就性能而言最快,最简洁的就是computed
+				
+				
+			})
+		</script>
+		
+	</body>
+</html>

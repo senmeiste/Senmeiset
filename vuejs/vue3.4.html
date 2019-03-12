@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Vue 计算属性的setter和getter</title>
+		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			{{fullName}}
+			<br>
+			{{fullNames}}
+		</div>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el: "#app",
+				data:{
+					firstName :"zhang",
+					lastName: "qiang",
+					
+				},
+				computed:{//计算属性 
+					fullName:function(){
+						return this.lastName + " " + this.firstName
+					},
+					fullNames:{
+						get:function(){
+							//此方法会在fullNames被调用时执行,若相关依赖值发生改变时,此方法也会被调用
+							console.log("计算取值时  1");
+							return this.lastName + " " + this.firstName
+						},
+						set:function(val){
+							//此方法会监听fullNames发生改变的时候,接收其改变值
+							console.log(val);
+							var arr = val.split(" ");
+							this.lastName = arr[1];
+							this.firstName = arr[0];
+						}
+					}
+				},
+			})
+		</script>
+		
+	</body>
+</html>

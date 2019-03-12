@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>hello world</title>
+		<!-- <script src="https://cdn.jsdelivr.net/npm/vue" type="text/javascript" charset="utf-8"></script> -->
+		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input type="text" v-model="inputval" value="" />
+			<button type="button" v-on:click="pushBtnclick">提交</button>
+			<ul>
+				<!-- <li v-for="item in list">{{item}}</li> -->
+				<todo-list v-bind:itemcent="item" v-for="item in list"></todo-list>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+
+// 		Vue.component("TodoList",{
+// 			props:["itemcent"],
+// 			template:"<li>{{itemcent}}</li>"
+// 		})
+		var TodoList = {
+			props:["itemcent"],
+			template:"<li>{{itemcent}}</li>"
+		};
+		var app = new Vue({
+			el:"#app",
+			components:{
+				TodoList:TodoList
+			},
+			data:{
+				list : [],
+				inputval:""
+			},
+			methods:{
+				pushBtnclick:function(){
+					this.list.push(this.inputval);
+					this.inputval = ""
+				}
+			}
+		})
+	</script>
+</html>

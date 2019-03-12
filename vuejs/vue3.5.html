@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Vue class属性绑定</title>
+		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		.colorLock{
+			color: aqua;
+		}
+		.colorBlack{
+			color: aquamarine;
+		}
+	</style>
+	<body>
+		<div id="app">
+			<div @click="classGet" :class="{colorLock:colorCss}">hello world</div>
+			<div @click="classGet" :class="[colorarr]">hello world</div>
+			<div @click="classGet" :style="style">hello world</div>
+		</div>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el: "#app",
+				data:{
+					colorCss:false,
+					colorarr:"",
+					style:{
+						color:"#ff3155"
+					},
+				},
+				methods:{
+					classGet:function(){
+						this.colorCss = true;
+						this.colorarr = "colorBlack";
+						this.style.color = "black";
+					}
+				}
+			})
+		</script>
+		
+	</body>
+</html>
