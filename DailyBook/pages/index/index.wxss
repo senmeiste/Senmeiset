@@ -1,0 +1,21 @@
+/**index.wxss**/
+
+view{
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  text-align: center;
+  color: #666;
+  padding: 20rpx;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  border: 2rpx solid #ccc;
+}
+
+.usermotto {
+  margin-top: 200px;
+}

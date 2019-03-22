@@ -1,0 +1,10 @@
+<!--index.wxml-->
+
+<import src="../../template/login.wxml"/>
+<template wx:if="{{!userInfo}}" is="login"></template>
+<view wx:else>
+  <view> 登陆之后的显示</view>
+  <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+  <view class="userinfo-nickname">姓名：{{userInfo.nickName}}</view>
+  <view>地区：{{userInfo.country}}</view>
+</view>

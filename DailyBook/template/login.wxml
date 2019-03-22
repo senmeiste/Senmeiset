@@ -1,0 +1,6 @@
+<!-- 登陆模板 -->
+<template name="login">
+  <view class='template'>
+		<button id='login' open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+	</view>
+</template>

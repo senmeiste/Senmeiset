@@ -1,0 +1,40 @@
+/**app.wxss**/
+page{
+  background: #f2f2f2;
+}
+view{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+.template{
+  width: 750rpx;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: url(https://oss.yoawo.com/yoawo_1547186948116.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+#login{
+  width: 302rpx;
+  height: 116rpx;
+  position: absolute;
+  left: 0;right: 0;
+  margin: 0 auto;
+  top: 26%;
+  background: url(https://oss.yoawo.com/yoawo_154158028799.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+
+
+
+
+
+
+
+
