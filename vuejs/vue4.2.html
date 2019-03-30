@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue组件传值</title>
+		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<coment :count='0' @inc="parentclick"></coment>
+			<coment :count='0' @inc="parentclick"></coment>
+			<div>{{number}}</div>
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		//定义全局模板
+		var coment ={
+			template:"<div @click='handleClick'>{{number}}</div>",
+			data:function(){
+				return {
+					number:this.count,
+				}
+			},
+			props:["count"],
+			methods:{
+				handleClick:function(){
+					this.number ++;
+					this.$emit('inc',this.number)
+				}
+			}
+		}
+		var vm = new Vue({
+			el:"#app",
+			components:{
+				coment:coment
+			},
+			data:{
+				number:0,
+			},
+			methods:{
+				parentclick:function(step){
+					this.number = step + this.number
+				}
+			}
+		})
+		
+	</script>
+</html>

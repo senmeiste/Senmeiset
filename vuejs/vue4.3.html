@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue组件总线/订阅发布/挂载监听</title>
+		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			
+		</div>
+		<!-- 
+			在ul，table，select，ol，等其他组件里使用子组件时出现bug时，可使用is方法解决组件调用时未在位置的bug
+		 
+		 -->
+	</body>
+	<script type="text/javascript">
+		//定义全局模板
+		Vue.component("row",{//命名,模板内容及调用
+			template:"<tr><td>this in row</td></tr>"
+		})
+		var vm = new Vue({
+			el:"#app"
+		})
+		
+	</script>
+</html>

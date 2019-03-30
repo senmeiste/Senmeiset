@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue组件使用</title>
+		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app" class="">
+			<numbdom ref="one" @chenge="monbtn"></numbdom>
+			<numbdom ref="tow" @chenge="monbtn"></numbdom>
+			<div>{{numss}}</div>
+			
+			<!-- 
+			 ref 可绑定dom节点，通过vue.$refs方法获得该节点内的所有元素
+			 -->
+			<div ref="consde">hello world</div>
+		</div>
+		
+	<script type="text/javascript">
+		//定义全局模板
+		Vue.component("numbdom",{//命名,模板内容及调用
+			template:"<div @click='namberis'>{{numbs}}</div>",
+			data:function (){
+				return {
+					numbs:0
+				}
+			},
+			methods:{
+				namberis:function(){
+					this.numbs ++;
+					this.$emit('chenge')
+				}
+			}
+		})
+		var vm = new Vue({
+			el:"#app",
+			data:{
+				numss:0
+			},
+			methods:{
+				monbtn:function(){
+// 					console.log(this.numss)
+// 					console.log(this.$refs.one.numbs)
+// 					console.log(this.$refs.tow.numbs )
+					this.numss = this.$refs.one.numbs +this.$refs.tow.numbs
+					
+					console.log( this.$refs.consde)
+				}
+			}
+		})
+		
+	</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>set 方法</title>
+		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<ul>
+				<li v-for="(item,index) of userInfo" :key="index">{{item.name}}--{{item.age}}--{{index}}</li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+		
+		var vm = new Vue({
+			el: "#app",
+			data: {
+				 userInfo:{
+					xiaoming:{
+						name:"xiaoming",
+						age:15
+					},
+					wangma:{
+						name:"wangma",
+						age:16
+					}
+				 }
+			},
+			methods:{
+				handleAlert:function(){
+					alert(125)
+				}
+			}
+		})
+		
+		//Vue.set(vm.userInfo,"mobile","15517158532")		可直接在console里更改vm实例里的数据
+		
+		//vm.$set(vm.userInfo,"addres","beijing")			同上,一个是vue方法,一个是实例方法
+	</script>
+</html>
