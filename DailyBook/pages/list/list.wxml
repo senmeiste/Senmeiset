@@ -1,0 +1,4 @@
+<!--pages/list/list.wxml-->
+
+<view catchtap='clickFn' class='{{index==indextype?"classin":""}}' data-indexs='{{index}}' wx:for="{{arraylist}}" wx:key="items">{{item}}</view>
+

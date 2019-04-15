@@ -1,0 +1,4 @@
+/* pages/list/list.wxss */
+.classin{
+  color: red;
+}
