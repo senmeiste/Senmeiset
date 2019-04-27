@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue中使用animate.css库</title>
+		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+		<link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css">
+	</head>
+	<style type="text/css">
+		
+	</style>
+	<body>
+		<!-- 
+我们可以通过以下特性来自定义过渡类名：
+
+enter-class
+enter-active-class
+enter-to-class (2.1.8+)
+leave-class
+leave-active-class
+leave-to-class (2.1.8+)
+
+
+他们的优先级高于普通的类名，
+这对于 Vue 的过渡系统和其他第三方 CSS 动画库，
+如 Animate.css 结合使用十分有用。
+		 
+		 -->
+		<div id="app">
+			<transition 
+				enter-active-class="animated tada"
+				leave-active-class="animated bounceOutRight"
+			>
+				<div v-if="show">
+					hello world
+				</div>
+			</transition>
+
+
+			<button type="button" @click="handclick">切换</button>
+
+		</div>
+
+	</body>
+	<script type="text/javascript">
+		var vm = new Vue({
+			el: "#app",
+			data: {
+				show: true
+			},
+			methods: {
+				handclick: function() {
+					this.show = !this.show;
+				}
+			}
+		})
+	</script>
+</html>

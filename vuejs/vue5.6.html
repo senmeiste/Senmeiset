@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue中动画的封装</title>
+		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		/* .v-enter {
+			opacity: 0;
+		}
+
+		.v-enter-active {
+			transition: opacity 3s;
+		}
+
+		.v-leave-to {
+			opacity: 0;
+		}
+
+		.v-leave-active {
+			transition: opacity 3s;
+		} */
+	</style>
+	<body>
+
+		<div id="app">
+			<slottime :show="show">
+				<h1>hello world</h1>
+			</slottime>
+			
+			<button type="button" @click="handclick"> show</button>
+		</div>
+
+	</body>
+	<script type="text/javascript">
+		Vue.component("slottime", { //命名,模板内容及调用
+			props: ["show"],
+			template: `<transition @before-enter="handBeforEnter"
+				@enter="handEnter">
+						<slot v-if="show"><slot>	
+					</transition>`,
+			methods: {
+				handBeforEnter: function(el) {
+					el.style.color = "#ff3153";
+				},
+				handEnter: function(el, done) {
+					setTimeout(() => {
+						el.style.color = "#999";
+						done();
+					}, 2000)
+				}
+			}
+		})
+		var vm = new Vue({
+			el: "#app",
+			data: {
+				show: true
+			},
+			methods: {
+				handclick: function() {
+					this.show = !this.show;
+				}
+			}
+		})
+	</script>
+</html>

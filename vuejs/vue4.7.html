@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue动态组件与v-once</title>
+		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<chile-one v-if="type == 'chile-one'"></chile-one>
+			<chile-two v-if="type == 'chile-two'"></chile-two>
+			<button type="button" @click="hoadckick">type</button>
+		</div>
+	</body>
+	<script type="text/javascript">
+		Vue.component("chile-one",{
+			template:"<div v-one>chile-one</div>"
+		})
+		Vue.component("chile-two",{
+			template:"<div v-one>chile-two</div>"
+		})
+		var vm = new Vue({
+			el:"#app",
+			data:{
+				type:"chile-one"
+			},
+			methods:{
+				hoadckick:function(){
+					this.type = this.type == "chile-one" ? "chile-two" : "chile-one";
+				}
+			}
+		})
+		
+	</script>
+</html>
