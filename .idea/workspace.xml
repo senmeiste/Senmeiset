@@ -2,20 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2df020eb-590e-4fe5-95e7-37ad9cec93e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Senmeiset.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/AiLei_mi.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DailyBook/pages/vue4.7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vuejs/velocityjs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vuejs/vue4.7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vuejs/vue5.1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vuejs/vue5.2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vuejs/vue5.3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vuejs/vue5.4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vuejs/vue5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Travel/.babelrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Travel/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Travel/.eslintignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Travel/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Travel/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Travel/.postcssrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Travel/build/build.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Travel/build/check-versions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Travel/build/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Travel/build/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Travel/build/vue-loader.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Travel/build/webpack.base.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Travel/build/webpack.dev.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Travel/build/webpack.prod.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Travel/config/dev.env.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Travel/config/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Travel/config/prod.env.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Travel/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Travel/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Travel/src/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Travel/src/assets/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Travel/src/components/HelloWorld.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Travel/src/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Travel/src/router/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Travel/static/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Travel/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Travel/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebStorm_2019.1_zh_utf-8.zip" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,44 +40,17 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Senmeiset" />
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vuejs/vue5.4.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1062">
-              <caret line="59" column="19" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vuejs/vue5.5.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="47" column="16" lean-forward="true" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vuejs/vue5.6.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="41" column="35" lean-forward="true" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vuejs/vue5.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -74,9 +61,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="991" />
-    <option name="width" value="938" />
-    <option name="height" value="1039" />
+    <option name="x" value="952" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -94,7 +81,7 @@
             <path>
               <item name="Senmeiset" type="b2602c69:ProjectViewProjectNode" />
               <item name="Senmeiset" type="462c0819:PsiDirectoryNode" />
-              <item name="vuejs" type="462c0819:PsiDirectoryNode" />
+              <item name="Travel" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -146,20 +133,19 @@
       <workItem from="1556357730206" duration="510000" />
       <workItem from="1556358607529" duration="947000" />
       <workItem from="1556359784475" duration="847000" />
-      <workItem from="1556364467010" duration="620000" />
+      <workItem from="1556364467010" duration="2645000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4063000" />
+    <option name="totallyTimeSpent" value="6088000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="793" y="0" width="750" height="831" extended-state="0" />
-    <editor active="true" />
+    <frame x="762" y="0" width="781" height="830" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20028012" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989339" visible="true" weight="0.30738255" />
+      <window_info id="Structure" order="1" sideWeight="0.5010661" side_tool="true" weight="0.30738255" />
+      <window_info id="Favorites" order="2" sideWeight="0.5010661" side_tool="true" weight="0.30738255" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -168,7 +154,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3286119" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32808024" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -180,31 +166,67 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vuejs/vue5.4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1062">
-          <caret line="59" column="19" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vuejs/vue5.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/vuejs/vue5.5.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
-          <caret line="47" column="16" lean-forward="true" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+          <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vuejs/vue5.6.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="41" column="35" lean-forward="true" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+        <state relative-caret-position="506">
+          <caret line="57" column="26" selection-start-line="41" selection-start-column="35" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vuejs/vue5.4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="59" column="19" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
         </state>
       </provider>
     </entry>
