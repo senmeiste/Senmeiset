@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue中同时使用过度和动画</title>
+		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+		<link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css">
+	</head>
+	<style type="text/css">
+		.fade-enter,.fead-leave-to{
+			opacity: 1;
+		}
+		.fead-enter-active,.fead-leave-active{
+			transition: opacity 3s; 
+		}
+		
+		.fade-enter {
+			opacity: 0;
+		}
+		
+		.fade-enter-active {
+			transition: opacity 3s;
+		}
+		
+		.fade-leave-to {
+			opacity: 0;
+		}
+		
+		.fade-leave-active {
+			transition: opacity 3s;
+		}
+	</style>
+	<body>
+		<!-- 
+		
+		appear  定义初始动画
+
+		 Vue 为了知道过渡的完成，必须设置相应的事件监听器。
+		 它可以是 transitionend 或 animationend ，这取决于给元素应用的 CSS 规则。
+		 如果你使用其中任何一种，Vue 能自动识别类型并设置监听。
+		 
+		 但是，在一些场景中，你需要给同一个元素同时设置两种过渡动效，
+		 比如 animation 很快的被触发并完成了，而 transition 效果还没结束。
+		 在这种情况中，你就需要使用 type 特性并设置 animation 或 transition 来明确声明你需要 Vue 监听的类型。
+		 type="transition"  
+		 
+		 在很多情况下，Vue 可以自动得出过渡效果的完成时机。
+		 默认情况下，Vue 会等待其在过渡效果的根元素的第一个 transitionend 或 animationend 事件。
+		 然而也可以不这样设定——比如，我们可以拥有一个精心编排的一系列过渡效果，其中一些嵌套的内部元素相比于过渡效果的根元素有延迟的或更长的过渡效果。
+
+		在这种情况下你可以用 <transition> 组件上的 duration 属性
+		定制一个显性的过渡持续时间 (以毫秒计)：
+		:duration="10000"
+		
+		也可以定制进入和移出的持续时间：
+		:duration="{ enter: 500, leave: 800 }"
+		 -->
+		<div id="app">
+			<transition 
+				:duration="5000"
+				name="fead"
+				appear
+				enter-active-class="animated bounceOut fade-enter-active"
+				leave-active-class="animated bounceOutRight fade-leave-active"
+				appear-active-class="animated bounceOut"
+			>
+				<div v-if="show">
+					hello world
+				</div>
+			</transition>
+
+
+			<button type="button" @click="handclick">切换</button>
+
+		</div>
+
+	</body>
+	<script type="text/javascript">
+		var vm = new Vue({
+			el: "#app",
+			data: {
+				show: true
+			},
+			methods: {
+				handclick: function() {
+					this.show = !this.show;
+				}
+			}
+		})
+	</script>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue中列表过渡</title>
+		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		.v-enter {
+			opacity: 0;
+		}
+
+		.v-enter-active {
+			transition: opacity 3s;
+		}
+
+		.v-leave-to {
+			opacity: 0;
+		}
+
+		.v-leave-active {
+			transition: opacity 3s;
+		}
+	</style>
+	<body>
+
+		<div id="app">
+			<transition-group>
+				<div v-for="item in list" :key="item.id">
+					{{item.title}}
+				</div>
+			</transition-group>
+			
+			<button @click="handclick">add</button>
+		</div>
+
+	</body>
+	<script type="text/javascript">
+		var count=0;
+		var vm = new Vue({
+			el: "#app",
+			data: {
+				list: []
+			},
+			methods: {
+				handclick: function() {
+					this.list.push({
+						id:count++,
+						title:"helo wolrd"
+					})
+				}
+			}
+		})
+	</script>
+</html>

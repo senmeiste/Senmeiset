@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue中js动画与Veloaity.js的结合</title>
+		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="velocityjs.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+
+		<div id="app">
+			<transition 
+				@before-enter="handBeforEnter"
+				@enter="handEnter"
+				@after-enter="handAfterEnter"
+				
+				@before-leave="handBeforLeave"
+				@leave="handLeave"
+				@after-leave="handAfterLeave"
+			>
+				<div v-if="show">
+					hello world
+				</div>
+			</transition>
+
+			<transition @before-enter="handBeforEnter1" @enter="handEnter1" @after-enter="handAfterEnter1">
+				<div v-if="show">
+					hello world1
+				</div>
+			</transition>
+
+
+			<button type="button" @click="handclick">切换</button>
+
+		</div>
+
+	</body>
+	<script type="text/javascript">
+		var vm = new Vue({
+			el: "#app",
+			data: {
+				show: true
+			},
+			methods: {
+				handclick: function() {
+					this.show = !this.show;
+				},
+				handBeforEnter:function(el){
+					el.style.color = "red"
+					console.log("过度动画进入开始")
+				},
+				handEnter:function(el,done){
+					console.log("过度动画进入执行")
+					setTimeout(()=>{
+						el.style.color = "green"
+					},2000)
+					setTimeout(()=>{
+						done();
+					},4000)
+				},
+				handAfterEnter:function(el){
+					el.style.color = "#000"
+					console.log("过度动画进入结束")
+				},
+				
+				handBeforLeave:function(el){
+					el.style.color = "ffcc22"
+					console.log("过度动画移除开始")
+				},
+				handLeave:function(el,done){
+					console.log("过度动画移除执行");
+					el.style.color = "#ff3153"
+					setTimeout(()=>{
+						el.style.color = "green"
+					},2000)
+					setTimeout(()=>{
+						done();
+					},4000)
+				},
+				handAfterLeave:function(el){
+					console.log("过度动画移除结束")
+					el.style.color = "#000"
+				},
+
+
+
+
+				handBeforEnter1: function(el) {
+					el.style.opacity = 0;
+					console.log("过度动画进入开始")
+				},
+				handEnter1: function(el,done ) {
+					console.log("过度动画进入执行")
+					Velocity(el, {
+						opacity: 1
+					}, {
+						duration: 1000,
+						complete: done
+					})
+				},
+				handAfterEnter1: function(el) {
+					el.style.color = "#ff3153"
+					console.log("过度动画进入结束")
+				},
+			},
+
+		})
+	</script>
+</html>

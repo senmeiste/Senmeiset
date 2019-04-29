@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue组件 发布订阅模式  总线机制</title>
+		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		Bus/总线/发布订阅模式/观察者模式
+		<br>
+		
+		<br>
+		<div id="app">
+			<chiild content="del"></chiild>
+			<chiild content="men"></chiild>
+		</div>
+	</body>
+	<script type="text/javascript">
+		Vue.prototype.bus = new Vue();
+		//定义全局模板
+		Vue.component("chiild",{
+			props:{
+				content:String
+			},
+			data:function(){
+				return {
+					itemstr:this.content
+				}
+			},
+			template:"<div @click='clickHandle'>{{itemstr}}</div>",
+			methods:{
+				clickHandle:function(){
+					this.bus.$emit("change",this.itemstr)
+				}
+			},
+			mounted:function(){
+				var that = this;
+				this.bus.$on("change",function(msg){
+					that.itemstr = msg;
+				})
+			}
+		});
+		var vm = new Vue({
+			el:"#app",
+			methods:{
+				
+			}
+		})
+		
+	</script>
+</html>

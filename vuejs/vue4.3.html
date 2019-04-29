@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue组件绑定原生事件</title>
+		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<!-- 绑定 自定义事件 -->
+			<child @click="handleclick"></child>
+			<!--  -->
+			<clicknative @click.native="handleclick"></clicknative>
+		</div>
+	</body>
+	<script type="text/javascript">
+		//定义全局模板
+		Vue.component("child",{//命名,模板内容及调用
+			template:'<div @click="handleclick">Child</div>',
+			methods:{
+				handleclick:function(){
+					this.$emit("click")
+				}
+			}
+		});
+		Vue.component("clicknative",{
+			template:"<div>clicknative</div>"
+		});
+		var vm = new Vue({
+			el:"#app",
+			methods:{
+				handleclick:function(){
+					alert(123)
+				}
+			}
+		})
+		
+	</script>
+</html>
