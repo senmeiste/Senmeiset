@@ -2,34 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2df020eb-590e-4fe5-95e7-37ad9cec93e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Travel/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Travel/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Travel/.eslintignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Travel/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Travel/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Travel/.postcssrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Travel/build/build.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Travel/build/check-versions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Travel/build/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Travel/build/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Travel/build/vue-loader.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Travel/build/webpack.base.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Travel/build/webpack.dev.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Travel/build/webpack.prod.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Travel/config/dev.env.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Travel/config/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Travel/config/prod.env.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Travel/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Travel/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Travel/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Travel/src/assets/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Travel/src/components/HelloWorld.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Travel/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Travel/src/router/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Travel/static/.gitkeep" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Travel/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Travel/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebStorm_2019.1_zh_utf-8.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mytravel/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/mytravel/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mytravel/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mytravel/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mytravel/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mytravel/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/mytravel/src/router/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -44,7 +21,7 @@
     <favorites_list name="Senmeiset" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -61,9 +38,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+    <option name="x" value="951" />
+    <option name="width" value="978" />
+    <option name="height" value="1039" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -134,16 +111,17 @@
       <workItem from="1556358607529" duration="947000" />
       <workItem from="1556359784475" duration="847000" />
       <workItem from="1556364467010" duration="2645000" />
+      <workItem from="1556419697830" duration="1203000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6088000" />
+    <option name="totallyTimeSpent" value="7291000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="762" y="0" width="781" height="830" extended-state="0" />
+    <frame x="761" y="0" width="782" height="831" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989339" visible="true" weight="0.30738255" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989339" visible="true" weight="0.3069705" />
       <window_info id="Structure" order="1" sideWeight="0.5010661" side_tool="true" weight="0.30738255" />
       <window_info id="Favorites" order="2" sideWeight="0.5010661" side_tool="true" weight="0.30738255" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -197,6 +175,20 @@
                 </list>
               </option>
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
           </value>
         </entry>
       </map>

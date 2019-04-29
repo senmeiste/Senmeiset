@@ -54,5 +54,9 @@ Setup e2e tests with Nightwatch? N
 
 Should we run     [基于那种包管理模式下]  npm install
 
+npm install fastclick --save    [解决移动端300毫秒点击延迟的问题，全局安装，不论是在编译环境还是打包环境，都依赖此包] 
+
+
+npm install vue-awesome-swiper --save   【安装awesome-swiper插件】
 
 ```
