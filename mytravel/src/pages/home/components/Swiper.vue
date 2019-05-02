@@ -1,7 +1,7 @@
 <template>
 	<div  class="wrapper">
 		<swiper :options="swiperOption">
-		  <swiper-slide class="swiper-img" v-for="item of swiperList" :key="item.id">
+		  <swiper-slide class="swiper-img" v-for="item of list" :key="item.id">
 				<img :src="item.imgsrc" alt="">
 			</swiper-slide>
 		  <div class="swiper-pagination"  slot="pagination"></div>
@@ -19,17 +19,14 @@
 					pagination:'.swiper-pagination',
 					loop: true
 				},
-				swiperList:[{
-					id: "0001",
-					imgsrc:"https://img1.qunarzz.com/p/tts4/1808/b5/af8811e92af2de02.jpg_r_640x420x90_a45a56cc.jpg"
-				},{
-					id: "0002",
-					imgsrc:"https://img1.qunarzz.com/p/tts4/1808/ff/a95ccd8a747e2302.jpg_r_640x420x90_dd7177ff.jpg"
-				},{
-					id: "0003",
-					imgsrc:"https://img1.qunarzz.com/p/tts5/1807/a1/55cc03ddee279802.jpg_r_640x420x90_830b1e85.jpg"
-				}]
+				swiperList:[]
 			}
+		},
+		props:{
+			list : Array
+		},
+		mounted () {
+			this.swiperList = this.list
 		}
 	}
 </script>

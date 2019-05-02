@@ -3,6 +3,8 @@ $bacolor : #00bcd4;
 $iconBack: rgba(0, 188, 212, 0.8);
 
 
+$headerHeight: 0.86rem;
+
 @mixin textoverflow {
 	text-overflow: ellipsis;
 	white-space: nowrap;

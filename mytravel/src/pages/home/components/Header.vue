@@ -4,13 +4,23 @@
 			<span class="iconfont">&#xe624;</span>
 		</div>
 		<div class="centennInput"><span class="iconfont">&#xe632;</span>内容</div>
-		<div class="rightCity">城市<span class="iconfont">&#xe612;</span></div>
+		
+		<router-link to="/city">
+			<div class="rightCity">{{city}}<span class="iconfont">&#xe612;</span></div>
+		</router-link>
 	</div>
 </template>
 
 <script>
 	export default {
-		name: 'HomeHeader'
+		name: 'HomeHeader',
+		props:{
+			city: String
+		},
+		data (){
+			return {
+			}
+		}
 	}
 </script>
 
@@ -19,10 +29,10 @@
 	@import '~styles/sassAll.scss';
 	.header {
 		background: $bacolor;
-		height: .86rem;
+		height: $headerHeight;
 		display: flex;
 		color: #fff;
-		line-height: .86rem;
+		line-height: $headerHeight;
 		font-size: 0.28rem;
 		.leftBtn {
 			width: .64rem;
@@ -44,6 +54,7 @@
 			width: 1.24rem;
 			float: right;
 			text-align: center;
+			color: #fff;
 		}
 	}
 </style>

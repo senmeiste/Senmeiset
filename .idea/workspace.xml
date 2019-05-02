@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2df020eb-590e-4fe5-95e7-37ad9cec93e1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mytravel/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/mytravel/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mytravel/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mytravel/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mytravel/src/components/HelloWorld.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mytravel/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/mytravel/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mytravel/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/mytravel/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mytravel/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/mytravel/config/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mytravel/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/mytravel/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mytravel/src/pages/home/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mytravel/src/pages/home/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mytravel/src/pages/home/components/Weekend.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mytravel/src/pages/home/components/Weekend.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,9 +39,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="951" />
-    <option name="width" value="978" />
-    <option name="height" value="1039" />
+    <option name="x" value="950" />
+    <option name="width" value="979" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -48,6 +49,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -64,7 +66,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -112,16 +113,17 @@
       <workItem from="1556359784475" duration="847000" />
       <workItem from="1556364467010" duration="2645000" />
       <workItem from="1556419697830" duration="1203000" />
+      <workItem from="1556666632007" duration="599000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7291000" />
+    <option name="totallyTimeSpent" value="7890000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="761" y="0" width="782" height="831" extended-state="0" />
+    <frame x="760" y="0" width="783" height="832" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989339" visible="true" weight="0.3069705" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989339" visible="true" weight="0.30655956" />
       <window_info id="Structure" order="1" sideWeight="0.5010661" side_tool="true" weight="0.30738255" />
       <window_info id="Favorites" order="2" sideWeight="0.5010661" side_tool="true" weight="0.30738255" />
       <window_info anchor="bottom" id="Message" order="0" />

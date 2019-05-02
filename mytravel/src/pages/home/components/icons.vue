@@ -15,54 +15,19 @@
 <script>
 	export default{
 		name:"HomeIcons",
+		props:{
+			list:Array
+		},
 		data (){
 			return {
 				swiperOption:{},
-				iconList:[
-					{
-						id:'001',
-						icon:'&#xe670;',
-						desc:'店铺'
-					},{
-						id:'002',
-						icon:'&#xe678;',
-						desc:'优惠券'
-					},{
-						id:'003',
-						icon:'&#xe674;',
-						desc:'咖啡'
-					},{
-						id:'004',
-						icon:'&#xe673;',
-						desc:'礼物'
-					},{
-						id:'005',
-						icon:'&#xe672;',
-						desc:'购物袋'
-					},{
-						id:'006',
-						icon:'&#xe679;',
-						desc:'会员'
-					},{
-						id:'007',
-						icon:'&#xe671;',
-						desc:'功能'
-					},{
-						id:'008',
-						icon:'&#xe677;',
-						desc:'地址'
-					},{
-						id:'009',
-						icon:'&#xe675;',
-						desc:'设置'
-					}
-				]
+				iconList:[]
 			}
 		},
 		computed:{
 			pages(){
 				const pages =[];
-				this.iconList.forEach((item,index)=>{
+				this.list.forEach((item,index)=>{
 					const page = Math.floor(index/8);
 					if(!pages[page]){
 						pages[page] = [];
