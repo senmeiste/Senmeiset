@@ -19,7 +19,9 @@ npm run build
 npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+For a detailed explanation on how things work,
+ check out the [guide](http://vuejs-templates.github.io/webpack/) 
+ and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 
 ## Vue 安装及环境生成配置
@@ -76,6 +78,11 @@ cnpm install node-sass --save-dev
 cnpm install sass-loader --save-dev
 
 npm install vue-awesome-swiper --save
+
+
+npm install better-scroll --save				【安装better-scroll插件】
+
+
 
 
 ```

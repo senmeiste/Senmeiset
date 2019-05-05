@@ -2,7 +2,7 @@
 	<div class="recommendBox">
 		<div class="title">热门推荐</div>
 		<ul class="itemlist">
-			<li class="itembox" v-for="item of itemlist" :key="item.id">
+			<li class="itembox" v-for="item of list" :key="item.id">
 				<div class="item-img">
 					<img :src="item.imgsrc">
 				</div>
@@ -21,28 +21,14 @@
 		name: "HomeRecommend",
 		data (){
 			return{
-				itemlist: [{
-					id: '0001',
-					title: "沙特海滩风景",
-					desc: "位于沙特海滨填海造陆地域，风景优美，景色秀丽",
-					imgsrc: "https://img1.qunarzz.com/p/tts4/1808/b5/af8811e92af2de02.jpg_r_640x420x90_a45a56cc.jpg"
-				}, {
-					id: '0002',
-					title: "沙特海滩风景",
-					desc: "位于沙特海滨填海造陆地域，风景优美，景色秀丽",
-					imgsrc: "https://img1.qunarzz.com/p/tts4/1808/b5/af8811e92af2de02.jpg_r_640x420x90_a45a56cc.jpg"
-				}, {
-					id: '0003',
-					title: "沙特海滩风景",
-					desc: "位于沙特海滨填海造陆地域，风景优美，景色秀丽",
-					imgsrc: "https://img1.qunarzz.com/p/tts4/1808/b5/af8811e92af2de02.jpg_r_640x420x90_a45a56cc.jpg"
-				}, {
-					id: '0004',
-					title: "沙特海滩风景",
-					desc: "位于沙特海滨填海造陆地域，风景优美，景色秀丽",
-					imgsrc: "https://img1.qunarzz.com/p/tts4/1808/b5/af8811e92af2de02.jpg_r_640x420x90_a45a56cc.jpg"
-				}]
+				itemlist: []
 			}
+		},
+		props:{
+			list: Array
+		},
+		mounted() {
+			
 		}
 	}
 </script>

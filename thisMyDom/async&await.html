@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function sing() {
+			return new Promise(function(resolve, reject) {
+				setTimeout(function() {
+					resolve(`来一首好听的歌吧~~~`);
+				}, 1000);
+			});
+		}
+
+		function say() {
+			return new Promise(function(resolve, reject) {
+				setTimeout(function() {
+					let age = 26
+					resolve(`hello, joel，今年我 ${age} 岁`);
+					// reject(`hello, joel，发生了异常。今年我 ${age} 岁`);
+				}, 1000);
+			});
+		}
+		async function demo() {
+			try {
+				const v = await say();
+				const s = await sing();
+				console.log(v); // 输出：hello, joel。今年我 26 岁
+				console.log(s) // 来一首好听的歌吧~~~
+			} catch (e) {
+				console.log(e)
+			}
+		}
+		demo();
+	</script>
+</html>

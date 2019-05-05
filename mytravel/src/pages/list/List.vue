@@ -1,5 +1,10 @@
 <template>
-<div>list</div>
+<div>
+	
+	
+	asedasdffgasdf
+	asdasdasd
+</div>
 </template>
 
 <script>
