@@ -1,12 +1,12 @@
 <template>
 	<div class="listAllBox" ref="wrapper">
 		<div class="listScroll">
-			<div class="cityClafy">
+			<div class="cityClafy" >
 				<div class="itemTitle border-topbottom">
 					当前城市
 				</div>
 				<div class="itemBox">
-					<div class="itemCity">北京</div>
+					<div class="itemCity">{{this.$store.state.city}}</div>
 				</div>
 			</div>
 			<div class="cityClafy">
@@ -14,15 +14,26 @@
 					热门城市
 				</div>
 				<div class="itemBox">
-					<div class="itemCity" v-for="item of hot" :key="item.id">{{item.name}}</div>
+					<div class="itemCity" 
+					v-for="item of hot" 
+					:key="item.id"
+					@click="handclcik(item.name)"
+					>{{item.name}}</div>
 				</div>
 			</div>
-			<div class="cityClafy" v-for="(item,key) of cities" :key="key">
+			<div 
+			class="cityClafy" 
+			v-for="(item,key) of cities" 
+			:key="key"
+			:ref="key"
+			>
 				<div class="itemTitle border-topbottom">
 					{{key}}
 				</div>
 				<div class="itemBox itemList">
-					<div class="item border-bottom" v-for="ites of item">{{ites.name}}</div>
+					<div class="item border-bottom" v-for="ites of item"
+					@click="handclcik(ites.name)"
+					>{{ites.name}}</div>
 					
 				</div>
 			</div>
@@ -38,11 +49,31 @@
 		name:"CityList",
 		props:{
 			hot:Array,
-			cities:Object
+			cities:Object,
+			letter:String
 		},
 		mounted() {
 			this.scroll = new BScroll(this.$refs.wrapper)
+		},
+		methods:{
+			handclcik (city){
+				console.log(city)
+				// this.$store.dispatch("changeCity",city)
+				this.$store.commit("changeCity",city)
+				this.$router.push("/")
+			}
+		},
+		watch:{
+			letter (){
+				// console.log(this.letter)
+				if(this.letter){
+					const element = this.$refs[this.letter];
+					// console.log(element)
+					this.scroll.scrollToElement(element[0])
+				}
+			}
 		}
+		
 		
 	}
 </script>
@@ -54,11 +85,16 @@
 	// 
 	// display: inline-block;
 	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 1.72rem;
+	
 }
 .listScroll{
-	padding-top: 1.72rem;
+	
 	display: inline-block;
 	// overflow: auto;
+	padding-bottom: 1.72rem;
 	
 }
 .cityClafy{

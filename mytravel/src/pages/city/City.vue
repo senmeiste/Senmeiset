@@ -1,9 +1,9 @@
 <template>
 	<div>
 		<city-header></city-header>
-		<city-seach></city-seach>
-		<city-list :cities="cities" :hot="hotCities"></city-list>
-		<city-cityify :cities="cities"></city-cityify>
+		<city-seach  :cities="cities" ></city-seach>
+		<city-list :cities="cities" :letter="letter" :hot="hotCities"></city-list>
+		<city-cityify :cities="cities" @change="handrightClassIfy"></city-cityify>
 	</div>
 </template>
 <script>
@@ -26,7 +26,8 @@
 		data (){
 			return {
 				cities:{},
-				hotCities:[]
+				hotCities:[],
+				letter:""
 			}
 		},
 		methods:{
@@ -42,7 +43,12 @@
 					this.hotCities = cityData.hotCities;
 				}
 				
+			},
+			handrightClassIfy(e){
+				// console.log(e);
+				this.letter = e;
 			}
+			
 		},
 		mounted() {
 			this.getCityInfo();

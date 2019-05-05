@@ -12,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
 			"/api":{
-				target:"http://192.168.1.101:8080",
+				target:"http://192.168.1.107:8080",
 				pathRewrite:{
 					'^/api' :"/static/mock"
 				}
@@ -20,7 +20,7 @@ module.exports = {
 		},
 
     // Various Dev Server settings
-    host: '192.168.1.101', // can be overwritten by process.env.HOST
+    host: '192.168.1.107', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,

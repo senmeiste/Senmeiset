@@ -82,6 +82,8 @@ npm install vue-awesome-swiper --save
 
 npm install better-scroll --save				【安装better-scroll插件】
 
+npm install vuex --save				[安装vuex]
+
 
 
 
@@ -97,6 +99,30 @@ npm install better-scroll --save				【安装better-scroll插件】
 
 其中： ‘dependencies’配置项必须全部存在
 
+
+
+```
+
+
+
+
+### Vue Router
+``` bash
+vue-router
+
+【编程式跳转】
+// 字符串
+this.$router.push("/")
+
+// 对象
+this.$router.push({ path: 'home' })
+
+// 带查询参数，变成 /register?plan=private
+this.$router.push({ path: 'register', query: { plan: 'private' }})
+
+
+【创建a标签来定义导航链接】
+<router-link to="/city">	</router-link>
 
 
 ```
