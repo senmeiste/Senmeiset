@@ -19,6 +19,10 @@
 	line-height: $headerHeight;
 	background: $bacolor;
 	padding: 0 0.4rem;
+	position: fixed;
+	left: 0;
+	top: $headerHeight;
+	z-index: 2;
 	input{
 		width: 100%;
 		height: 0.6rem;

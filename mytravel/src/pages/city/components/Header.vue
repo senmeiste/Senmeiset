@@ -27,7 +27,10 @@
 		text-align: center;
 		line-height: 0.86rem;
 		color: #fff;
-		position: relative;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 2;
 		.leftBtn{
 			width: .64rem;
 			height: 0.86rem;

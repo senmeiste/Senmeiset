@@ -59,4 +59,6 @@ npm install fastclick --save    [解决移动端300毫秒点击延迟的问题�
 
 npm install vue-awesome-swiper --save   【安装awesome-swiper插件】
 
+npm install better-scroll --save				【安装better-scroll插件】
+
 ```
