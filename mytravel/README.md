@@ -27,6 +27,16 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 
 ``` bash
+# 配置环境  如node ， cnpm ，安装webpack，webpack-cli
+sudo npm install webpack -g
+npm install webpack webpack-cli -g
+
+# 安装vue 安装vue-cli
+npm install vue -g
+
+npm install -g vue-cli
+sudo cnpm install -g vue-cli
+
 
 # vue cli webpack this is mytravel
 # 安装vue 环境搭建自动化脚手架项目
@@ -58,5 +68,28 @@ npm install fastclick --save    [解决移动端300毫秒点击延迟的问题�
 
 
 npm install vue-awesome-swiper --save   【安装awesome-swiper插件】
+
+
+[安装sass]
+cnpm install node-sass --save-dev    
+
+cnpm install sass-loader --save-dev
+
+npm install vue-awesome-swiper --save
+
+
+```
+
+
+## 如环境更换则需要在新环境内安装该项目需要的插件及包依赖
+
+``` bash
+
+所需安装依赖请查看根目录下的package.json文件内容
+
+
+其中： ‘dependencies’配置项必须全部存在
+
+
 
 ```
