@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-    <router-view/>
+    <!-- <router-view/> -->
+		
+		<keep-alive exclude="Manger">
+			<router-view/>
+		</keep-alive>
   </div>
 </template>
 

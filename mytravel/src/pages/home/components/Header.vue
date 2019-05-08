@@ -6,13 +6,13 @@
 		<div class="centennInput"><span class="iconfont">&#xe632;</span>内容</div>
 		
 		<router-link to="/city">
-			<div class="rightCity">{{city}}<span class="iconfont">&#xe612;</span></div>
+			<div class="rightCity">{{this.city}}<span class="iconfont">&#xe612;</span></div>
 		</router-link>
 	</div>
 </template>
 
 <script>
-	import { mapState } from 'vuex'
+	import { mapState,mapGetters } from 'vuex'
 	export default {
 		name: 'HomeHeader',
 		data (){
@@ -20,7 +20,8 @@
 			}
 		},
 		computed:{
-			...mapState(['city'])
+			...mapState(['city']),
+			...mapGetters(['doubleCity'])
 		}
 	}
 </script>

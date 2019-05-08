@@ -6,7 +6,7 @@
 					当前城市
 				</div>
 				<div class="itemBox">
-					<div class="itemCity">{{this.$store.state.city}}</div>
+					<div class="itemCity">{{city}}</div>
 				</div>
 			</div>
 			<div class="cityClafy">
@@ -45,6 +45,7 @@
 
 <script>
 	import BScroll from 'better-scroll'
+	import { mapState,mapMutations} from 'vuex'
 	export default{
 		name:"CityList",
 		props:{
@@ -55,15 +56,22 @@
 		mounted() {
 			this.scroll = new BScroll(this.$refs.wrapper)
 		},
-		methods:{
+		methods:{//事件
 			handclcik (city){
-				console.log(city)
+				// console.log(city)
 				// this.$store.dispatch("changeCity",city)
-				this.$store.commit("changeCity",city)
+				//普通写法
+				// this.$store.commit("changeCity",city)
+				//高级写法
+				this.changeCity(city)
 				this.$router.push("/")
-			}
+			},
+			...mapMutations(['changeCity'])
 		},
-		watch:{
+		computed:{ //计算属性
+			...mapState(['city'])
+		},
+		watch:{//侦听属性
 			letter (){
 				// console.log(this.letter)
 				if(this.letter){

@@ -15,6 +15,7 @@
 
 <script>
 	import BScroll from 'better-scroll'
+	import {mapMutations} from 'vuex'
 	export default{
 		name:"CitySeach",
 		data (){
@@ -27,7 +28,7 @@
 		props:{
 			cities:Object
 		},
-		watch:{
+		watch:{//
 			keyword (){
 				if(this.timer){
 					clearTimeout(this.timer)
@@ -49,7 +50,7 @@
 				},100);
 			}
 		},
-		mounted() {
+		mounted() {//
 			if(this.list && this.keyword){
 				this.scroll = new BScroll(this.$refs.seach)
 			}
@@ -60,9 +61,11 @@
 					//dispatch 可以直接省略该方法
 					// this.$store.dispatch("changeCity",city)
 					//上的dispatch省略后可以直接调用commit方法
-					this.$store.commit("changeCity",city)
+					// this.$store.commit("changeCity",city)
+					this.changeCity(city)
 					this.$router.push("/")
-				}
+				},
+				...mapMutations(['changeCity'])
 		}
 	}
 </script>

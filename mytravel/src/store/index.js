@@ -18,5 +18,10 @@ export default new Vuex.Store({
 	//上的dispatch省略后可以直接调用commit方法
 	//此方法直接可以调用mutations方法
 	//this.$store.commit("changeCity",city)
-	mutations
+	mutations,
+	getters:{
+		doubleCity (state){
+			return state.city +" "+state.city
+		}
+	}
 })

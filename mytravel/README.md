@@ -126,3 +126,96 @@ this.$router.push({ path: 'register', query: { plan: 'private' }})
 
 
 ```
+
+
+
+### Vuex
+
+``` bash
+
+
+
+//dispatch 可以直接省略该方法 此方法对应vuex的actions方法
+	// this.$store.dispatch("changeCity",city)
+	
+	
+export default new Vuex.Store({
+	//state 为单一状态数，存放数据源
+	state:{
+		city: "beijign"
+	},
+	actions:{
+	 	changeCity (ctx,city){
+	 		ctx.commit("changeCity",city)
+	 	}
+	},
+	// 更改 Vuex 的 store 中的状态的唯一方法是提交 mutation
+	mutations:{
+		changeCity (state,city){
+			state.city = city
+		}
+	},
+	//vuex里的计算属性
+	getter:{
+		doneTodos: state =>{
+			return state.city + " " + state.city 
+		}
+	}
+})
+
+# 在vue代码里进行通信时
+
+	## 事件调用时
+handclcik (city){ 
+	//dispatch 可以直接省略该方法
+	this.$store.dispatch("changeCity",city)
+	//上的dispatch省略后可以直接调用commit方法
+	this.$store.commit("changeCity",city)
+}
+
+
+## 高级写法
+
+	import { mapState,mapMutations} from 'vuex'
+
+
+
+	methods:{//事件
+		handclcik (city){
+			this.changeCity(city)
+			this.$router.push("/")
+		},
+		...mapMutations(['changeCity'])
+	},
+	computed:{//计算属性
+		...mapState(['city'])
+	},
+
+
+## 高级写法
+
+import { mapState,mapGetters } from 'vuex'
+
+computed:{
+	...mapState(['city']),
+	...mapGetters(['doubleCity'])
+}
+
+
+
+
+
+```
+
+
+
+
+``` bash
+# 对页面经行缓存
+<keep-alive></keep-alive>
+
+## 对某一页面不进行缓存
+<keep-alive exclude="Manger"></keep-alive>
+
+
+```

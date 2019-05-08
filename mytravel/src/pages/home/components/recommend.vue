@@ -2,7 +2,14 @@
 	<div class="recommendBox">
 		<div class="title">热门推荐</div>
 		<ul class="itemlist">
-			<li class="itembox" v-for="item of list" :key="item.id">
+			
+			<router-link
+				tag="li"
+			 class="itembox" 
+			 v-for="item of list" 
+			 :key="item.id"
+			 :to="'/detail/'+item.id "
+			 >
 				<div class="item-img">
 					<img :src="item.imgsrc">
 				</div>
@@ -11,7 +18,8 @@
 					<p class="item-desc">{{item.desc}}</p>
 					<button class="item-buton">查看详情</button>
 				</div>
-			</li>
+			<!-- </li> -->
+			</router-link>
 		</ul>
 	</div>
 </template>
