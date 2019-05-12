@@ -1,0 +1,20 @@
+$bacolor : #00bcd4;
+
+$iconBack: rgba(0, 188, 212, 0.8);
+
+
+$headerHeight: 0.86rem;
+
+@mixin textoverflow {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	display: inline-block;
+	overflow: hidden;
+}
+
+@mixin centenoverflow($line-clamp:2) {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: $line-clamp;
+}

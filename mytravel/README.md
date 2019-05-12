@@ -219,3 +219,20 @@ computed:{
 
 
 ```
+
+
+
+
+## 打包之后需要服务器才能运行
+
+``` bash
+配置命令行HTTP服务器, 基于 nodeJs.
+ npm install http-server 
+ npm i http-server -g
+
+
+在站点目录下开启命令行输入
+
+ http-server
+
+```
