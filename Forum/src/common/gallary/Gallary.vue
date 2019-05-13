@@ -3,9 +3,9 @@
 		<div class="wrapper">
 			<swiper :options="swiperOptions">
 			  <swiper-slide class="swiper-img" v-for="(item,index) in imgs" :key="index">
-					<img class="gallaryImg" :src="item">
+					<img class="gallaryImg" :src="item.imgsrc">
 				</swiper-slide>
-			  <div class="swiper-pagination"  slot="pagination"></div>
+			  <div class="swiper-pagination"  slot="pagination"> 0.0 </div>
 			</swiper>
 		</div>
 		
@@ -28,8 +28,10 @@
 		data () {
 			return {
 				swiperOptions:{
-					pagination:'.swiper-pagination',
-					paginationType:'fraction',
+					pagination: {
+						el: '.swiper-pagination',
+						type: 'fraction',
+					},
 					loop: true,
 				}
 			}

@@ -7,9 +7,9 @@ import 'babel-polyfill'
 import router from './router'
 import fastclick from 'fastclick'
 import store from "./store"
-import 'styles/reset.css'
-import 'styles/border.min.css'
-import 'styles/iconfont.css'
+import '~styles/reset.css'
+import '~styles/border.css'
+import '~styles/iconfont.css'
 import 'swiper/dist/css/swiper.css'
 
 Vue.config.productionTip = false
