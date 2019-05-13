@@ -72,7 +72,7 @@ export default {
 
 .swiper-img {
   width: 100%;
-  height: 4.2rem;
+  height: 3.75rem;
   overflow: hidden;
   display: inline-block;
   img {
@@ -81,49 +81,5 @@ export default {
   }
 }
 
-.bannerBox {
-  width: 100%;
-  height: 4.2rem;
-  overflow: hidden;
-  position: relative;
-  .bannerimg {
-    width: 100%;
-    height: 100%;
-  }
-  .bannerCentex {
-    width: 100%;
-    height: 0.6rem;
-    line-height: 0.6rem;
-    color: #fff;
-    font-size: 0.28rem;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    display: flex;
-    background-image: linear-gradient(
-      top,
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0.8)
-    );
-    .centexBox {
-      flex: 1;
-      height: 0.6rem;
-      padding: 0 0.12rem;
-    }
-    .rightIcon {
-      width: auto;
-      padding: 0 0.12rem;
-      border-radius: 0.35rem;
-      height: 0.4rem;
-      line-height: 0.4rem;
-      font-size: 0.24rem;
-      background: rgba(241, 241, 241, 0.3);
-      margin: 0.15rem 0.12rem;
-      .bannerIcon {
-        margin-right: 0.05rem;
-        font-size: 0.24rem;
-      }
-    }
-  }
-}
+
 </style>

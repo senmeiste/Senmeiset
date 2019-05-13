@@ -11,6 +11,7 @@
 <script>
 import TempHeader from "common/template/Header";
 import TempBotmbtn from "common/template/Botmbtn";
+import ReleaseText from '@/pages/release/components/Releasetext'
 export default {
   name: "Index",
   data() {
@@ -21,7 +22,8 @@ export default {
   },
   components: {
     TempHeader,
-    TempBotmbtn
+    TempBotmbtn,
+    ReleaseText
   }
 };
 </script>

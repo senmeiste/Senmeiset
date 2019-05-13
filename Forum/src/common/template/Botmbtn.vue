@@ -3,7 +3,9 @@
 		<div class="btnBotmBox">
     <ul>
       <li 
-			v-for="(item,index) of btnlist" :key="item.iconCode" @click="handClickRouter(index)" >
+			v-for="(item,index) of btnlist" :key="item.iconCode" @click="handClickRouter(index)" 
+			:class=" { thisBtn : indexType == index}"
+			>
         <div class="iconBox">
           <span class="iconfont" v-html="item.iconCode"></span>
         </div>
@@ -41,7 +43,8 @@ export default {
 					iconCode:"&#xeb9b;",
 					routerSrc:"/my"
 				}
-			]
+			],
+			indexType:0
 		}
 	},
 	methods: {
@@ -50,6 +53,14 @@ export default {
 				this.$router.push(this.btnlist[e].routerSrc)
 			}
 		}
+	},
+	activated() {
+		this.btnlist.forEach(( element , index)=> {
+			
+			if(element.routerSrc == this.$route.path){
+				this.indexType = index;
+			}
+		});
 	}
 };
 </script>
@@ -57,7 +68,8 @@ export default {
 @import "~styles/sassAll.scss";
 .nullBotmbtn{
 	width: 100%;
-  height: $botmHeight;
+	height: $botmHeight;
+	float: left;
 }
 .btnBotmBox {
   position: fixed;
@@ -95,7 +107,11 @@ export default {
         font-size: 0.26rem;
         float: left;
       }
-    }
+		}
+		.thisBtn{
+			color: $forumBack;
+			background: #fff;
+		}
   }
 }
 </style>
