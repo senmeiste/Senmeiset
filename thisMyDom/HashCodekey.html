@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="./sha1.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div>1</div>
+		<div>2</div>
+
+	</body>
+	<script type="text/javascript">
+		var bodys = document.getElementsByTagName("div")
+		// document.getElementsByName()
+		console.log(bodys)
+		console.log(sha1('中文'))
+		
+		
+		console.log(sha1('Message to hash'));
+		var hash = sha1.create();
+		hash.update('中文')
+		console.log(hash.hex())//此方法得到加密后字符串
+		console.log(hash.array())//数组
+		console.log(hash.digest())//Uint8数组
+
+		console.log(hash.arrayBuffer())//arrayBuffer
+		//jwt拦截难度大，判断拦截破解项较为多样性，可判断时间戳，判断header响应时序，判断
+	</script>
+</html>

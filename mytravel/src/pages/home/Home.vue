@@ -51,10 +51,13 @@ export default{
 			if(res.data.ret == true){
 				const data = res.data.data;
 				console.log(data)
-				this.swiperList = data.swiperList;
-				this.iconList = data.iconList;
-				this.itemlist = data.itemlist;
-				this.weekendlist = data.weekendlist;
+				// this.swiperList = data.swiperList;
+				// this.iconList = data.iconList;
+				// this.itemlist = data.itemlist;
+				// this.weekendlist = data.weekendlist;
+				var city = res.data.city
+				// this.$store.dispatch("changeCity",city)
+				this.$store.commit("changeCity",city)
 			}else{
 				
 			}

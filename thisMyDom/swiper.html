@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>大图滚动</title>
+	</head>
+	<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		.swiperBox {
+			width: 100%;
+			height: 3.75rem;
+			overflow: hidden;
+			display: inline-block;
+			overflow-x: scroll;
+		}
+
+		.swiperBox ul {
+			height: 8rem;
+		}
+
+		.swiperBox li {
+			float: left;
+			width: 7.5rem;
+			height: 3.75rem;
+			list-style: none;
+			display: inline-block;
+		}
+
+		.swiperBox li img {
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+	<script type="text/javascript">
+		//适配
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 750 * 100 + 'px';
+		window.onresize = function() {
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 750 * 100 + 'px';
+		};
+	</script>
+	<body>
+		<div class="swiperBox">
+			<ul>
+				<li>
+					<img src="https://cn.bing.com/th?id=OHR.MarathonduMont_ZH-CN5049722437_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp">
+				</li>
+				<li>
+					<img src="https://cn.bing.com/th?id=OHR.CapeMayWarbler_ZH-CN5148312890_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp">
+				</li>
+				<li>
+					<img src="https://cn.bing.com/th?id=OHR.MacmillanForest_ZH-CN5295176479_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp">
+				</li>
+				<li>
+					<img src="https://cn.bing.com/th?id=OHR.CuracaoTurtle_ZH-CN5468901173_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp">
+				</li>
+			</ul>
+		</div>
+
+	</body>
+	<script type="text/javascript">
+		window.onload = function() {
+			var div = document.getElementsByClassName("swiperBox")[0]; 
+			var ulDom = document.getElementsByTagName("ul")[0];
+			ulDom.innerHTML += ulDom.innerHTML;
+			var liDom = ulDom.getElementsByTagName("li");
+			ulDom.style.width = liDom[0].offsetWidth * liDom.length + "px";
+			var timer = setInterval(swiper,1)
+			function swiper (){
+				if(div.scrollLeft > div.scrollWidth/2){
+					div.scrollLeft = 0;
+				}
+				div.scrollLeft += 4;
+				if(div.scrollLeft % liDom[0].offsetWidth < 4 && (div.scrollLeft / liDom[0].offsetWidth).toFixed(0) >= 1){
+					clearInterval(timer);
+					div.scrollLeft = liDom[0].offsetWidth * (div.scrollLeft / liDom[0].offsetWidth).toFixed(0);
+					setTimeout(function(){
+						timer = setInterval(swiper, 5);
+					},2000)
+				}
+			}
+		}
+	</script>
+</html>

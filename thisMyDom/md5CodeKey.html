@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script src="./md5.js" type="text/javascript" charset="utf-8"></script>
+	<body>
+	</body>
+	<script type="text/javascript">
+		// import md5 from "md5.js"
+		
+		var ls = hex_md5(123456)
+		console.log(ls)
+		var lst = b64_md5(123456)
+		console.log(lst)
+		
+		var lst64 = window.btoa("test");
+		var ls64 = window.atob("dGVzdA==");
+		console.log(lst64)
+		console.log(ls64)
+	</script>
+</html>

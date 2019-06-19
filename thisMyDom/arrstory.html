@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var a = [12,16,17,18,95,64,1,2,7856,645,75];
+		
+		function sortArr(arr){
+			for(var i=0;i<arr.length;i++){
+				for(var a=0;a<arr.length-1;a++){
+					if(arr[i] < arr[a]){
+						var thisIndex = arr[a];
+						arr[a] = arr[i];
+						arr[i] = thisIndex;
+					}
+				}
+			}
+			return arr
+		}
+		
+		console.log(sortArr(a))
+	
+		var s = [{num:12,times:1560759136248},{num:10,times:1560759136248},{num:14,times:1560759136248},{num:14,times:1560759136148},{num:13,times:1560759136248},{num:1,times:1560759136248}]
+		console.log(s.sort(function(a,b){
+			if(a.num == b.num){
+				return a.times-b.times
+			}else{
+				return a.num-b.num
+			}
+		}))
+		
+		
+		var str = 'ajshgndhg';
+		console.log(str.split("").reverse().join(""))
+		
+		
+		var ser = {
+			a:{
+				se:12
+			},
+			b:15,
+			te:12
+		}
+		
+		var b = JSON.stringify(ser)
+		console.log(JSON.parse(b))
+		
+	</script>
+</html>

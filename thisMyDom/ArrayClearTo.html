@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>数组判断两个和为第三个</title>
+	</head>
+	<body>
+	</body>
+<script type="text/javascript">
+	
+	var arrAy = [1,2,3,3,4,6,5,78,4,45,9];
+	
+	function ArrayClear(arr){
+		var toArr =[];
+		for (var i = 0;i<arr.length;i++) {
+			var A = arr[i];
+			for(var e = 0;e<arr.length;e++){
+				if(i != e){
+					var B = arr[e];
+					for(var n =0;n < arr.length;n++){
+						if(n != i&& n!= e){
+							var C = arr[n]
+							if(A + B == C){
+								toArr.push([A,B,C])
+							}
+						}
+					}
+				}
+			}
+			
+		}
+		return toArr
+	}
+	
+	
+	console.log(ArrayClear(arrAy))
+	
+	
+	function ArrayClearS(arr){
+		var toArr =[];
+		arr.forEach((value,index)=>{
+			var A = value,i=index;
+			arr.forEach((value,index)=>{
+				if(i != index){
+					var B = value,e=index;
+					arr.forEach((value,index)=>{
+						if( A + B == value && index!= e && index!=i ){
+							toArr.push([A,B,value])
+						}
+					});
+				}
+			});
+		});
+		return toArr
+	}
+	console.log(ArrayClearS(arrAy))
+</script>
+	
+	
+</html>

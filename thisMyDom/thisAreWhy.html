@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+<script type="text/javascript">
+	var a = function(){
+		console.log(this)
+	}
+	a()
+	
+	var a1 = function(){
+		this.ta = 12;
+		this.tb = 13;
+		this.te = function(){
+			console.log(this)
+		}
+		this.te()
+		console.log(this)
+	}
+	var be =  a1();
+	
+	
+	var se = function(){
+		var te = {};
+		te.se = 12;
+		te.sw = 13;
+		te.type = function(){
+			console.log(this)
+		}
+		return te
+	}
+	var ses = new se();
+		ses.type()
+		
+	
+	function OenOje(){}
+	OenOje.prototype.name = "asdasd";
+	OenOje.prototype.setEn = function(){
+		console.log(this)
+	}
+	var ter = new OenOje();
+	ter.setEn()
+	
+	
+	
+</script>
+</html>

@@ -138,18 +138,21 @@ this.$router.push({ path: 'register', query: { plan: 'private' }})
 //dispatch 可以直接省略该方法 此方法对应vuex的actions方法
 	// this.$store.dispatch("changeCity",city)
 	
-	
+//通过use直接将状态从根组件“注入”到每一个子组件中
+Vue.use(Vuex)
+
 export default new Vuex.Store({
 	//state 为单一状态数，存放数据源
 	state:{
 		city: "beijign"
 	},
+	//actions [ˈækʃnz] 
 	actions:{
 	 	changeCity (ctx,city){
 	 		ctx.commit("changeCity",city)
 	 	}
 	},
-	// 更改 Vuex 的 store 中的状态的唯一方法是提交 mutation
+	// 更改 Vuex 的 store 中的状态的唯一方法是提交 mutation  [mju(ː)ˈteɪʃənz]
 	mutations:{
 		changeCity (state,city){
 			state.city = city
@@ -164,7 +167,14 @@ export default new Vuex.Store({
 })
 
 # 在vue代码里进行通信时
-
+		// 计算属性 computed [kəmˈpjuːtɪd] 
+		computed:{
+			
+			city () {
+				console.log(this.$store.state.city)
+				return this.$store.state.city
+			}
+		}
 	## 事件调用时
 handclcik (city){ 
 	//dispatch 可以直接省略该方法
@@ -207,6 +217,42 @@ computed:{
 
 ```
 
+
+## bus总线机制
+``` bash
+		Vue.prototype.bus = new Vue();
+		//定义全局模板
+		Vue.component("chiild",{
+			props:{
+				content:String
+			},
+			data:function(){
+				return {
+					itemstr:this.content
+				}
+			},
+			template:"<div @click='clickHandle'>{{itemstr}}</div>",
+			methods:{
+				clickHandle:function(){
+					//对总线进行事件推出
+					this.bus.$emit("change",this.itemstr)
+				}
+			},
+			mounted:function(){
+				var that = this;
+				//接受推出的事件，并做处理
+				this.bus.$on("change",function(msg){
+					that.itemstr = msg;
+				})
+			}
+		});
+
+
+
+
+
+
+```
 
 
 

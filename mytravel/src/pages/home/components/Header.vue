@@ -12,7 +12,8 @@
 </template>
 
 <script>
-	import { mapState,mapGetters } from 'vuex'
+	// import { mapState,mapGetters } from 'vuex'
+	import Vuex from 'vuex'
 	export default {
 		name: 'HomeHeader',
 		data (){
@@ -20,8 +21,14 @@
 			}
 		},
 		computed:{
-			...mapState(['city']),
-			...mapGetters(['doubleCity'])
+			
+			city () {
+				console.log(this.$store.state.city)
+				return this.$store.state.city
+			}
+			// ...mapState(['city']),
+			// ...mapGetters(['doubleCity'])
+			
 		}
 	}
 </script>
